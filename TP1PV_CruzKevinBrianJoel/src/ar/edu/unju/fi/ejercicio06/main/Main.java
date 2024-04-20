@@ -12,7 +12,7 @@ public class Main {
 			System.out.println("Ingrese 1 -> Crear Objeto con constructor por defecto.");
 			System.out.println("Ingrese 2 -> Crear Objeto con constructor parametrizado.");
 			System.out.println("Ingrese 3 -> Crear Objeto con constructor sin definir la provincia.");
-			System.out.println("Ingrese 3 -> Salir Del Menu.");
+			System.out.println("Ingrese 4 -> Salir Del Menu.");
 			System.out.println("Ingrese una opcion para continuar: ");
 			opcion = scan.nextByte();
 			switch (opcion) {
