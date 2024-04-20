@@ -9,7 +9,6 @@ public class Main {
         
         System.out.print("Ingrese un numero: ");
         int n = scanner.nextInt();
-        
         CalculadoraEspecial calculadora = new CalculadoraEspecial();
         calculadora.setNum(n);
         
