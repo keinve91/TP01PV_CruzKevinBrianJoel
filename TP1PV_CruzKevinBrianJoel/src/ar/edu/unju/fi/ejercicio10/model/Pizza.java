@@ -16,9 +16,7 @@ public class Pizza {
 		return diametro;
 	}
 	public void setDiametro(int diametro) {
-		if(diametro == 20 || diametro == 30 || diametro == 40) {
 		this.diametro = diametro;
-		}
 	}
 	public double getPrecio() {
 		return precio;
