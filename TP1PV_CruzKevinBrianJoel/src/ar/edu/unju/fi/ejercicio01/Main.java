@@ -5,9 +5,9 @@ public class Main{
 			
 			int n1 = 8, n2 = 5, n3 = 1, n4 = 20, n5 = 9;
 			
-			float producto = (n1+n2+n3+n4+n5) / 5.0f;
+			float resultado = (n1+n2+n3+n4+n5) / 5.0f;
 			
-			System.out.println("El promedio es: " + producto);
+			System.out.println("El promedio es: " + resultado);
 			
 		}
 
