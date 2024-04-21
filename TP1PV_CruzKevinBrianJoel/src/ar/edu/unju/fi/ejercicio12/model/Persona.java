@@ -39,20 +39,6 @@ public class Persona {
     public String determinarEstacion() {
         int diaAño = fechaNacimiento.get(Calendar.DAY_OF_YEAR);
         
-        // Ajuste para años bisiestos
-        if (fechaNacimiento.get(Calendar.YEAR) % 4 == 0) {
-            diaAño++;
-            if ((diaAño >= 22 && diaAño <= 80) || (diaAño >= 356 && diaAño <= 367)) {
-                return "Verano";
-            } else if (diaAño >= 81 && diaAño <= 173) {
-                return "Otoño";
-            } else if (diaAño >= 174 && diaAño <= 265) {
-                return "Invierno";
-            } else {
-                return "Primavera";
-            }
-        }
-        
         if ((diaAño >= 21 && diaAño <= 79) || (diaAño >= 355 && diaAño <= 366)) {
             return "Verano";
         } else if (diaAño >= 80 && diaAño <= 172) {
@@ -67,36 +53,30 @@ public class Persona {
     public String determinarSignoZodiaco() {
         int diaAño = fechaNacimiento.get(Calendar.DAY_OF_YEAR);
         
-        // Ajuste para años bisiestos
-        if (fechaNacimiento.get(Calendar.YEAR) % 4 == 0) {
-            diaAño++;
-        }
-        
-        // Determinar el signo zodiacal según el día del año
-        if ((diaAño >= 21 && diaAño <= 79) || (diaAño >= 355 && diaAño <= 366)) {
-            return "Capricornio";
-        } else if (diaAño >= 80 && diaAño <= 140) {
-            return "Acuario";
-        } else if (diaAño >= 141 && diaAño <= 201) {
-            return "Piscis";
-        } else if (diaAño >= 202 && diaAño <= 262) {
+        if (diaAño >= 80 && diaAño <= 109) {
             return "Aries";
-        } else if (diaAño >= 263 && diaAño <= 323) {
+        } else if (diaAño >= 110 && diaAño <= 140) {
             return "Tauro";
-        } else if (diaAño >= 324 && diaAño <= 384) {
+        } else if (diaAño >= 141 && diaAño <= 171) {
             return "Géminis";
-        } else if (diaAño >= 385 && diaAño <= 445) {
+        } else if (diaAño >= 172 && diaAño <= 202) {
             return "Cáncer";
-        } else if (diaAño >= 446 && diaAño <= 506) {
+        } else if (diaAño >= 203 && diaAño <= 233) {
             return "Leo";
-        } else if (diaAño >= 507 && diaAño <= 566) {
+        } else if (diaAño >= 234 && diaAño <= 264) {
             return "Virgo";
-        } else if (diaAño >= 567 && diaAño <= 626) {
+        } else if (diaAño >= 265 && diaAño <= 294) {
             return "Libra";
-        } else if (diaAño >= 627 && diaAño <= 686) {
+        } else if (diaAño >= 295 && diaAño <= 324) {
             return "Escorpio";
-        } else {
+        } else if (diaAño >= 325 && diaAño <= 354) {
             return "Sagitario";
+        } else if ((diaAño >= 355 && diaAño <= 365) || (diaAño >= 1 && diaAño <= 19)) {
+            return "Capricornio";
+        } else if (diaAño >= 20 && diaAño <= 49) {
+            return "Acuario";
+        } else {
+            return "Piscis";
         }
     }
 
